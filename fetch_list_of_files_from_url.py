@@ -19,7 +19,7 @@ def fetch_files(url):
         soup = BeautifulSoup(response.text, 'html.parser')
         x = soup.find_all()
 
-        # Loop through all the <a> tags (hyperlinks)
+        # Loop through all the <a> tags (hyperlinks) and only process files and folders
         for link in soup.find_all('a'):
             href = link.get('href')
             full_url = urllib.parse.urljoin(url, href)

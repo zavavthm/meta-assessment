@@ -2,6 +2,16 @@
 # I/P: [11, 5, 2, 5, 3, 7, 101, 18]
 # O/P: 4
 
+"""
+Approach:
+========
+Iterate through every number in the list. 
+And if the next number is strictly greater than the current num, then append to the resulting list
+Else, Insert it into the list using Binary Search Insertion. 
+Because, Binary search insertion will rearrange the smaller numbers in order affecting the existing longest strictly increasing subsequence
+This will help us to go through the list only once and length of the resulting string will be our answer
+"""
+
 def longestStrictlyIncrSubsequence(nums):
     res = []
 
